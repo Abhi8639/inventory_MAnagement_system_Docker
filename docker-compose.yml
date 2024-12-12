@@ -1,18 +1,10 @@
 version: '3.9'
 
 services:
-  frontend:
-    image: abhikodati/inventorymanagement-frontend:latest
-    container_name: ims-frontend
-    ports:
-      - "3000:3000"
-    networks:
-      - ims-network
-    depends_on:
-      - backend # Ensure backend starts before frontend
-
   backend:
-    image: abhikodati/ims-backend:latest
+    build:
+      context: ./Inventory-Management-System
+      dockerfile: Dockerfile
     container_name: ims-backend
     ports:
       - "8080:8080"
@@ -28,7 +20,19 @@ services:
       SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: "true"
       GOOGLE_API_KEY: "AIzaSyAsUUB8_o5a9m2VN_TvF62E_xnNxFcz5Kg"
     depends_on:
-      - db # Ensure the database starts before the backend
+      - db
+    networks:
+      - ims-network
+
+  frontend:
+    build:
+      context: ./inventory-management-system-frontend
+      dockerfile: Dockerfile
+    container_name: ims-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
     networks:
       - ims-network
 
@@ -40,7 +44,7 @@ services:
       POSTGRES_PASSWORD: root
       POSTGRES_DB: inventory_management_system
     volumes:
-      - ./db:/docker-entrypoint-initdb.d # Mount SQL scripts for initialization
+      - ./db:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
     networks:
