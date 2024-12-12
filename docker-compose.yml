@@ -1,10 +1,20 @@
 version: '3.9'
 
 services:
+  frontend:
+    image: abhikodati/inventorymanagement-frontend:latest
+    container_name: ims-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      REACT_APP_BACKEND_URL: "http://backend:8080" # If the frontend needs to call the backend
+    networks:
+      - ims-network
+
   backend:
-    build:
-      context: ./Inventory-Management-System
-      dockerfile: Dockerfile
+    image: abhikodati/ims-backend:latest
     container_name: ims-backend
     ports:
       - "8080:8080"
@@ -21,18 +31,6 @@ services:
       GOOGLE_API_KEY: "AIzaSyAsUUB8_o5a9m2VN_TvF62E_xnNxFcz5Kg"
     depends_on:
       - db
-    networks:
-      - ims-network
-
-  frontend:
-    build:
-      context: ./inventory-management-system-frontend
-      dockerfile: Dockerfile
-    container_name: ims-frontend
-    ports:
-      - "3000:3000"
-    depends_on:
-      - backend
     networks:
       - ims-network
 
