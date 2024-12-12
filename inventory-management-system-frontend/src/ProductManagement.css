@@ -1,0 +1,193 @@
+
+
+/* Base body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and modern font */
+    background-color: #f4f4f9; /* Light gray background for contrast */
+    margin: 0; /* Remove default body margin */
+}
+
+/* Shared styles for headers */
+h1, h2 {
+    text-align: center; /* Center-align headers */
+    color: #333; /* Dark gray color for readability */
+    margin-top: 20px; /* Add spacing above the headers */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex; /* Flexbox for layout */
+    justify-content: flex-end; /* Aligns navigation links to the right */
+    background-color: #343a40; /* Dark gray background */
+    color: white; /* White text for contrast */
+    padding: 15px 20px; /* Padding for spacing */
+    font-size: 18px; /* Standard font size */
+    position: relative; /* Fix navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full-width navbar */
+    z-index: 1000; /* Ensures navbar stays above other content */
+}
+
+/* Navbar logo styling */
+.navbar .logo {
+    position: absolute; /* Position the logo on the left */
+    left: 20px; /* Add left spacing for alignment */
+    font-size: 20px; /* Slightly larger font size for prominence */
+    font-weight: bold; /* Bold text for emphasis */
+    color: white; /* White color to match the navbar */
+}
+
+/* Navbar link styles */
+.navbar a {
+    color: white; /* White text for contrast */
+    text-decoration: none; /* Removes default underline from links */
+    padding: 15px; /* Padding for better click area */
+    margin-left: 20px; /* Spacing between links */
+}
+
+/* Navbar link hover effect */
+.navbar a:hover {
+    background-color: #007bff; /* Blue background on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Spacer to prevent content overlap with fixed navbar */
+.navbar-spacer {
+    height: 60px; /* Spacer height matching the navbar */
+    width: 100%; /* Full-width spacer */
+}
+
+/* Product management container styling */
+.product-management {
+    margin-top: 850px; /* Large margin for spacing from the top */
+    padding: 30px; /* Internal padding */
+    max-width: 900px; /* Limit the width for better readability */
+    background-color: #fff; /* White background for contrast */
+    border-radius: 8px; /* Smooth rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px; /* Spacing between form elements */
+}
+
+/* Label styling in forms */
+.form-group label {
+    display: block; /* Block layout for labels */
+    margin-bottom: 8px; /* Spacing below the label */
+    font-weight: 600; /* Slightly bold text for emphasis */
+    color: #555; /* Medium gray color for readability */
+}
+
+/* Input field styling in forms */
+.form-group input {
+    width: 100%; /* Full width for alignment */
+    padding: 12px; /* Internal padding for comfort */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Standard font size */
+    background-color: #f9f9f9; /* Light background color for input fields */
+}
+
+/* Input field focus effect */
+.form-group input:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #007bff; /* Blue border on focus */
+    background-color: #e9f1fe; /* Light blue background on focus */
+}
+
+/* Submit button styling */
+.submit-btn {
+    width: 100%; /* Full-width button */
+    background-color: #28a745; /* Green background for positive action */
+    color: white; /* White text for contrast */
+    padding: 12px 0; /* Internal padding */
+    border: none; /* Removes default border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Standard font size */
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Table styling for products */
+.product-table {
+    width: 100%; /* Full-width table */
+    border-collapse: collapse; /* Remove default spacing between table borders */
+    margin-top: 30px; /* Spacing above the table */
+    font-size: 16px; /* Standard font size */
+}
+
+/* Table header and cell styling */
+.product-table th, .product-table td {
+    padding: 15px; /* Internal padding for table cells */
+    text-align: left; /* Left-align content */
+    border: 1px solid #ddd; /* Light gray border for structure */
+}
+
+/* Table header styling */
+.product-table th {
+    background-color: #343a40; /* Dark gray background for header */
+    color: white; /* White text for contrast */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Alternating row background color */
+.product-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray background for even rows */
+}
+
+/* Row hover effect */
+.product-table tr:hover {
+    background-color: #f1f1f1; /* Slightly darker gray on hover */
+}
+
+/* Action buttons cell alignment */
+.product-table td.actions {
+    text-align: right; /* Right-align action buttons */
+    white-space: nowrap; /* Prevent wrapping of buttons */
+}
+
+/* Action button container */
+.button-container {
+    display: inline-flex; /* Inline-flex for button layout */
+    gap: 10px; /* Spacing between buttons */
+}
+
+/* Edit and delete button styling */
+.product-table .edit-btn, .product-table .delete-btn {
+    padding: 8px 16px; /* Internal padding */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Edit button styling */
+.product-table .edit-btn {
+    background-color: #007bff; /* Blue background for edit button */
+    color: white; /* White text for contrast */
+}
+
+/* Edit button hover effect */
+.product-table .edit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Delete button styling */
+.product-table .delete-btn {
+    background-color: #dc3545; /* Red background for delete button */
+    color: white; /* White text for contrast */
+}
+
+/* Delete button hover effect */
+.product-table .delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}

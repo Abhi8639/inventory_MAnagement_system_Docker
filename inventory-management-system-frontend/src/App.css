@@ -1,0 +1,68 @@
+/* Centers text alignment for the entire application. */
+.App { 
+  text-align: center;
+}
+
+/* Sets the height of the application logo and disables pointer interactions. */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* Adds a spinning animation to the logo when motion preferences allow it. */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; /* Infinite spin, taking 20 seconds per rotation. */
+  }
+}
+
+/* Styles the application header with a dark background and centered content. */
+.App-header {
+  background-color: #282c34; /* Dark gray background color. */
+  min-height: 100vh; /* Ensures the header takes up the full viewport height. */
+  display: flex; /* Enables flexbox layout for child elements. */
+  flex-direction: column; /* Arranges child elements in a column. */
+  align-items: center; /* Horizontally centers child elements. */
+  justify-content: center; /* Vertically centers child elements. */
+  font-size: calc(10px + 2vmin); /* Sets responsive font size. */
+  color: white; /* White text color for visibility against the dark background. */
+}
+
+/* Styles links in the application with a custom blue color. */
+.App-link {
+  color: #61dafb; /* Light blue color matching the React logo theme. */
+}
+
+/* Defines the spinning animation for the application logo. */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); /* Starts at 0 degrees rotation. */
+  }
+  to {
+    transform: rotate(360deg); /* Completes a full 360-degree rotation. */
+  }
+}
+
+/* Creates a spacer below the Navbar to ensure content isn't overlapped. */
+.navbar-spacer {
+  height: 60px; /* Default height for the spacer. */
+}
+
+/* Adjusts the height of the Navbar spacer for smaller screens. */
+@media (max-width: 768px) {
+  .navbar-spacer {
+    height: 70px; /* Increased height for medium-sized screens. */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-spacer {
+    height: 80px; /* Further increased height for small screens. */
+  }
+}
+.content-wrapper {
+  margin-top: 60px;
+  padding: 20px;
+  overflow-y: auto; /* Enables vertical scrolling if content grows too large */
+  min-height: calc(100vh - 60px); /* Ensures the wrapper always fills the screen minus the navbar height */
+}

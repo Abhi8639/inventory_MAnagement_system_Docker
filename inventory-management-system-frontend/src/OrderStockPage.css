@@ -1,0 +1,107 @@
+/* Set the background image for the page */
+body {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    font-family: Arial, sans-serif; /* Sets a clean font for the page */
+    background-image: url('warehouse.webp'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the image fixed on scroll */
+    background-position: center; /* Centers the image */
+}
+
+/* Container for the warehouse stock page */
+.warehouse-stock {
+    max-width: 600px; /* Limits the container width for readability */
+    margin: 80px auto; /* Centers the container with a margin from the top */
+    padding: 20px; /* Adds internal spacing */
+    position: relative;
+    top: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for readability */
+    border-radius: 8px; /* Smoothly rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1; /* Ensures the form is above the background */
+}
+
+/* Styling for headings in the page */
+h2 {
+    text-align: center; /* Centers the heading text */
+    color: #333; /* Dark gray color for readability */
+    margin-bottom: 20px; /* Adds spacing below the heading */
+    font-size: 1.8em; /* Larger font size for emphasis */
+}
+
+/* Section for updating warehouse stock */
+.update-section {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks elements vertically */
+    gap: 15px; /* Adds spacing between elements */
+}
+
+/* Styling for form labels */
+label {
+    font-weight: bold; /* Makes the label text stand out */
+    color: #555; /* Medium gray color for readability */
+}
+
+/* Input and dropdown field styling */
+select,
+input[type="number"] {
+    width: 100%; /* Full width for better alignment */
+    padding: 10px; /* Internal padding for user comfort */
+    font-size: 16px; /* Standard font size */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light gray border */
+    background-color: #f9f9f9; /* Subtle background color for fields */
+    transition: border-color 0.3s; /* Smooth transition for focus effects */
+}
+
+/* Focus styles for input and dropdown fields */
+select:focus,
+input[type="number"]:focus {
+    border-color: #28a745; /* Green border to indicate focus */
+    outline: none; /* Removes default outline */
+    background-color: #fff; /* White background for clarity */
+}
+
+/* Styling for buttons */
+button {
+    padding: 12px; /* Internal spacing */
+    font-size: 16px; /* Standard font size */
+    font-weight: bold; /* Bold text for emphasis */
+    color: white; /* White text for contrast */
+    background-color: #28a745; /* Green background for positive actions */
+    border: none; /* Removes default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #218838; /* Darker green for hover state */
+}
+
+/* Common styles for error and success messages */
+.error-message,
+.success-message {
+    text-align: center; /* Center-align the messages */
+    font-size: 14px; /* Standard font size for messages */
+    margin-top: 15px; /* Spacing above the messages */
+    padding: 10px; /* Internal padding */
+    border-radius: 4px; /* Rounded corners for consistency */
+}
+
+/* Error message styling */
+.error-message {
+    color: #d9534f; /* Red text to indicate error */
+    background-color: #f8d7da; /* Light red background for visibility */
+    border: 1px solid #f5c6cb; /* Border to match the background */
+}
+
+/* Success message styling */
+.success-message {
+    color: #5cb85c; /* Green text to indicate success */
+    background-color: #d4edda; /* Light green background for visibility */
+    border: 1px solid #c3e6cb; /* Border to match the background */
+}

@@ -1,0 +1,51 @@
+version: '3.9'
+
+services:
+  frontend:
+    image: abhikodati/inventorymanagement-frontend:latest
+    container_name: ims-frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - ims-network
+    depends_on:
+      - backend # Ensure backend starts before frontend
+
+  backend:
+    image: abhikodati/ims-backend:latest
+    container_name: ims-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_APPLICATION_NAME: "Inventory Management System"
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://db:5432/inventory_management_system"
+      SPRING_DATASOURCE_USERNAME: "postgres"
+      SPRING_DATASOURCE_PASSWORD: "root"
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: "org.hibernate.dialect.PostgreSQLDialect"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: "org.postgresql.Driver"
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: "true"
+      GOOGLE_API_KEY: "AIzaSyAsUUB8_o5a9m2VN_TvF62E_xnNxFcz5Kg"
+    depends_on:
+      - db # Ensure the database starts before the backend
+    networks:
+      - ims-network
+
+  db:
+    image: postgres:15
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: inventory_management_system
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d # Mount SQL scripts for initialization
+    ports:
+      - "5432:5432"
+    networks:
+      - ims-network
+
+networks:
+  ims-network:
+    driver: bridge

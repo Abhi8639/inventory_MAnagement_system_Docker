@@ -1,0 +1,112 @@
+/* General body styling */
+body {
+  background-color: white; /* White background for a clean look */
+}
+
+/* Main container for the order page */
+.order-page-container {
+  position: relative; /* Position for potential child element adjustments */
+  max-width: 600px; /* Limits the container width for readability */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Internal spacing */
+  background-color: #f9f9f9; /* Light gray background for contrast */
+  border-radius: 8px; /* Smoothly rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-top: 200px; /* Push the container down for spacing from the top */
+}
+
+/* Styling for the order page title */
+.order-page-title {
+  text-align: center; /* Center-align the text */
+  color: #333; /* Dark gray color for contrast */
+  margin-bottom: 20px; /* Spacing below the title */
+}
+
+/* Form layout for the order page */
+.order-page-form {
+  display: flex; /* Flexbox layout for form elements */
+  flex-direction: column; /* Arrange elements in a column */
+  gap: 15px; /* Add spacing between form elements */
+}
+
+/* Input fields for the order page */
+.order-page-input {
+  padding: 10px; /* Internal spacing */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in element width */
+}
+
+/* Button styling for submitting the order */
+.order-page-button {
+  background-color: #4CAF50; /* Green background for a positive action */
+  color: white; /* White text for contrast */
+  padding: 10px; /* Internal spacing */
+  width: 100%; /* Full width */
+  border-radius: 4px; /* Smoothly rounded corners */
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+}
+
+/* Button styling for removing an item */
+.remove-button {
+  background-color: #ff6b6b; /* Red background to indicate deletion */
+  color: white; /* White text for contrast */
+  border: none; /* Remove default border */
+  padding: 5px 10px; /* Internal spacing */
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+  border-radius: 4px; /* Smoothly rounded corners */
+}
+
+/* Section for displaying order items */
+.order-items-section {
+  display: flex; /* Flexbox layout for alignment */
+  align-items: center; /* Vertically center elements */
+  margin-bottom: 10px; /* Spacing below each item */
+  gap: 10px; /* Spacing between elements */
+}
+
+/* Button for adding a new product */
+.add-product-button {
+  background-color: #4CAF50; /* Green background for positive action */
+  color: white; /* White text for contrast */
+  padding: 10px; /* Internal spacing */
+  width: 100%; /* Full width */
+  border-radius: 4px; /* Smoothly rounded corners */
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+  margin-top: 15px; /* Spacing above the button */
+}
+
+/* Display style for prices in the order items section */
+.price-display {
+  flex-grow: 1; /* Expand to fill available space */
+  text-align: right; /* Align price to the right */
+  font-weight: bold; /* Bold font for emphasis */
+  padding-right: 10px; /* Spacing to the right */
+  color: #333; /* Dark gray color for readability */
+}
+
+/* Spacer below the navbar for proper layout */
+.navbar-spacer {
+  height: 60px; /* Default spacer height */
+}
+
+/* Adjustments for medium-sized screens (up to 768px) */
+@media (max-width: 768px) {
+  .navbar-spacer {
+    height: 70px; /* Increased height for smaller screens */
+  }
+
+  .order-page-container {
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+}
+
+/* Adjustments for small-sized screens (up to 480px) */
+@media (max-width: 480px) {
+  .navbar-spacer {
+    height: 80px; /* Further increased height for very small screens */
+  }
+
+  .order-page-container {
+    padding: 10px; /* Further reduced padding for very small screens */
+  }
+}

@@ -1,0 +1,77 @@
+/* General container styling */
+div {
+  font-family: Arial, sans-serif; /* Clean and widely-supported font */
+  max-width: 800px; /* Limits container width for better readability */
+  margin: 2rem auto; /* Centers the container with spacing */
+  padding: 2rem; /* Internal spacing */
+  background-color: #f8f9fa; /* Light gray background for contrast */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header styling */
+h2 {
+  text-align: center; /* Centers the header text */
+  color: #343a40; /* Dark gray color for readability */
+  font-size: 1.8rem; /* Large font size for prominence */
+  margin-bottom: 1.5rem; /* Adds spacing below the header */
+}
+
+/* Error message styling */
+.error-message {
+  color: #dc3545; /* Red text to indicate an error */
+  background-color: #f8d7da; /* Light red background for visibility */
+  padding: 0.75rem; /* Internal spacing */
+  margin: 1rem 0; /* Adds spacing above and below the message */
+  border-radius: 4px; /* Rounded corners for consistency */
+  text-align: center; /* Centers the error text */
+}
+
+/* Table styling */
+table {
+  width: 100%; /* Full width table */
+  border-collapse: collapse; /* Removes gaps between table borders */
+  margin-top: 1rem; /* Spacing above the table */
+}
+
+/* Table header styling */
+thead {
+  background-color: #343a40; /* Dark gray background for the header */
+  color: #ffffff; /* White text for contrast */
+}
+
+th, td {
+  padding: 0.75rem; /* Internal spacing for table cells */
+  text-align: left; /* Left-aligns text in cells */
+  border: 1px solid #dee2e6; /* Light gray borders for structure */
+}
+
+/* Header text styling */
+th {
+  font-weight: bold; /* Makes header text stand out */
+  text-transform: uppercase; /* Capitalizes header text */
+  font-size: 0.85rem; /* Slightly smaller font size for compactness */
+}
+
+/* Table data styling */
+td {
+  font-size: 0.9rem; /* Standard size for table data */
+}
+
+/* Alternate row background color for readability */
+tr:nth-child(even) {
+  background-color: #f1f3f5; /* Light gray for even rows */
+}
+
+/* Row hover effect */
+tr:hover {
+  background-color: #e9ecef; /* Slightly darker gray on hover */
+}
+
+/* Paragraph text styling */
+p {
+  text-align: center; /* Centers the paragraph text */
+  color: #6c757d; /* Medium gray for secondary text */
+  font-size: 1rem; /* Standard font size */
+  padding: 1rem 0; /* Adds spacing above and below */
+}

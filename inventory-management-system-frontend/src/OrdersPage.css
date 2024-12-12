@@ -1,0 +1,71 @@
+/* Container for the orders page */
+.orders-page {
+    max-width: 1200px; /* Limit the page width for better readability */
+    margin: 4900px auto 20px; /* Center the page horizontally with top and bottom margins */
+    padding: 20px; /* Add spacing inside the container */
+    background-color: #f4f4f9; /* Light gray background for contrast */
+}
+
+/* Main heading for the page */
+h1 {
+    text-align: center; /* Center-align the heading text */
+    font-size: 2em; /* Larger font size for emphasis */
+    color: #333; /* Dark gray text for readability */
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+/* Grid layout for displaying order cards */
+.order-grid {
+    display: grid; /* Use CSS grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with minimum card width */
+    gap: 20px; /* Add spacing between grid items */
+    padding: 20px 0; /* Add vertical padding around the grid */
+}
+
+/* Styling for individual order cards */
+.order-card {
+    border: 1px solid #ddd; /* Light gray border for structure */
+    border-radius: 6px; /* Rounded corners for a modern look */
+    padding: 16px; /* Internal spacing */
+    background-color: #fafafa; /* Slightly off-white background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    transition: transform 0.2s; /* Smooth hover animation */
+}
+
+/* Hover effect for order cards */
+.order-card:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for emphasis */
+}
+
+/* Title within order cards */
+.order-card h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2em; /* Slightly larger font for titles */
+    color: #333; /* Dark gray color */
+    text-align: center; /* Center-align the title */
+}
+
+/* Paragraph text inside order cards */
+.order-card p {
+    margin: 8px 0; /* Vertical spacing between paragraphs */
+    color: #555; /* Medium gray for secondary text */
+}
+
+/* List styling within order cards */
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+/* Styling for individual list items */
+li {
+    padding: 8px 0; /* Vertical padding for spacing */
+    border-bottom: 1px solid #eee; /* Light border for separation */
+    color: #333; /* Dark gray text color */
+}
+
+/* Remove border for the last list item */
+li:last-child {
+    border-bottom: none; /* Cleaner look for the last item */
+}

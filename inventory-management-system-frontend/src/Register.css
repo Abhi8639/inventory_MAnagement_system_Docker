@@ -1,0 +1,119 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box model across all elements */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and modern font */
+    background-color: #f4f4f9; /* Light gray background for a subtle look */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Removes default margin */
+}
+
+/* Registration form container styling */
+.register-container {
+    max-width: 450px; /* Limits the container width for better readability */
+    width: 100%; /* Allows responsiveness */
+    padding: 50px; /* Internal spacing */
+    position: relative;
+    top: 35px;
+    background-color: #fff; /* White background for contrast */
+    border-radius: 12px; /* Rounded corners for a modern look */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease-in-out; /* Smooth hover effects */
+}
+
+/* Hover effect for the registration form container */
+.register-container:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Main heading styling */
+h1 {
+    text-align: center; /* Centers the text */
+    color: #333; /* Dark gray for readability */
+    margin-bottom: 25px; /* Spacing below the heading */
+    font-size: 28px; /* Large font size for prominence */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Form group layout */
+.form-group {
+    margin-bottom: 20px; /* Spacing between form elements */
+}
+
+/* Label styling */
+.form-group label {
+    display: block; /* Makes labels block elements */
+    margin-bottom: 8px; /* Spacing below the label */
+    font-weight: 600; /* Slightly bold text */
+    color: #555; /* Medium gray for readability */
+}
+
+/* Input and dropdown styling */
+.form-group input, .form-group select {
+    width: 100%; /* Full width for alignment */
+    padding: 12px; /* Internal padding for user comfort */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 6px; /* Smooth rounded corners */
+    font-size: 16px; /* Standard font size */
+    background-color: #f9f9f9; /* Subtle background color for fields */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover and focus states */
+}
+
+/* Focus effect for input and dropdown fields */
+.form-group input:focus, .form-group select:focus {
+    outline: none; /* Removes default browser outline */
+    border-color: #007bff; /* Blue border on focus */
+    background-color: #e9f1fe; /* Light blue background on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle blue glow on focus */
+}
+
+/* Submit button styling */
+.submit-btn {
+    width: 100%; /* Full width button */
+    background-color: #28a745; /* Green background for positive action */
+    color: white; /* White text for contrast */
+    padding: 12px; /* Internal padding */
+    border: none; /* Removes default border */
+    border-radius: 6px; /* Rounded corners for a smooth look */
+    font-size: 18px; /* Slightly larger font for emphasis */
+    font-weight: bold; /* Bold text for prominence */
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+    transition: background-color 0.3s, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Hover effect for the submit button */
+.submit-btn:hover {
+    background-color: #218838; /* Darker green background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Error message styling */
+.error-message {
+    color: #dc3545; /* Red text for error messages */
+    font-size: 14px; /* Smaller font size for secondary information */
+    margin-top: 5px; /* Spacing above the message */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .register-container {
+        padding: 30px; /* Reduced padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller font size for headings */
+    }
+
+    .submit-btn {
+        font-size: 16px; /* Smaller button text */
+        padding: 10px; /* Reduced padding for buttons */
+    }
+}

@@ -1,0 +1,142 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+    background-color: #f4f4f9; /* Light gray background for subtle contrast */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+/* Header Styles */
+h2 {
+    text-align: center; /* Center-align header text */
+    color: #333; /* Dark gray for readability */
+    margin-top: 20px; /* Space above header */
+}
+
+h3 {
+    text-align: center; /* Center-align subheader text */
+    font-weight: bold; /* Bold text for emphasis */
+    margin-bottom: 20px; /* Space below subheader */
+}
+
+/* Warehouse Management Container */
+.warehouse-management {
+    max-width: 900px; /* Limit width for readability */
+    margin: 0 auto; /* Center container horizontally */
+    padding: 30px; /* Add padding inside the container */
+    background-color: #fff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 600px; /* Adjusts vertical position */
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px; /* Space between form elements */
+}
+
+.form-group label {
+    display: block; /* Labels are block elements */
+    margin-bottom: 8px; /* Space below the label */
+    font-weight: 600; /* Slightly bold for readability */
+    color: #555; /* Medium gray for better contrast */
+}
+
+.form-group input {
+    width: 100%; /* Full-width inputs */
+    padding: 12px; /* Internal padding for user comfort */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Standard font size */
+    background-color: #f9f9f9; /* Subtle gray background */
+}
+
+.form-group input:focus {
+    outline: none; /* Removes default outline */
+    border-color: #007bff; /* Blue border on focus */
+    background-color: #e9f1fe; /* Light blue background on focus */
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%; /* Full-width button */
+    background-color: #28a745; /* Green background for positive action */
+    color: white; /* White text for contrast */
+    padding: 12px 0; /* Vertical padding */
+    border: none; /* Removes border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Standard font size */
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.submit-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Table Styles */
+.warehouse-table {
+    width: 100%; /* Full-width table */
+    border-collapse: collapse; /* Remove gaps between table borders */
+    margin-top: 30px; /* Space above the table */
+    font-size: 16px; /* Standard font size */
+}
+
+.warehouse-table th, .warehouse-table td {
+    padding: 15px; /* Internal cell padding */
+    text-align: left; /* Align text to the left */
+    border: 1px solid #ddd; /* Light gray border for structure */
+}
+
+.warehouse-table th {
+    background-color: #343a40; /* Dark gray background for headers */
+    color: white; /* White text for contrast */
+    font-weight: bold; /* Bold header text */
+}
+
+.warehouse-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row color for readability */
+}
+
+.warehouse-table tr:hover {
+    background-color: #f1f1f1; /* Subtle hover effect */
+}
+
+.warehouse-table td.actions {
+    text-align: right; /* Align actions to the right */
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Button Container */
+.button-container {
+    display: inline-flex; /* Aligns buttons inline */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Edit and Delete Buttons */
+.warehouse-table .edit-btn, .warehouse-table .delete-btn {
+    padding: 8px 16px; /* Button padding */
+    border: none; /* Removes border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Slightly smaller font size */
+    cursor: pointer; /* Pointer cursor */
+    font-weight: bold; /* Bold text */
+}
+
+.warehouse-table .edit-btn {
+    background-color: #007bff; /* Blue background for edit button */
+    color: white; /* White text for contrast */
+}
+
+.warehouse-table .edit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.warehouse-table .delete-btn {
+    background-color: #dc3545; /* Red background for delete button */
+    color: white; /* White text for contrast */
+}
+
+.warehouse-table .delete-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
