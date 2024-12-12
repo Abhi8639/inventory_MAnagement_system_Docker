@@ -2,7 +2,9 @@ version: '3.9'
 
 services:
   frontend:
-    image: abhikodati/inventorymanagement-frontend:latest
+    build:
+      context: ./inventory-management-system-frontend
+      dockerfile: Dockerfile
     container_name: ims-frontend
     ports:
       - "3000:3000"
@@ -14,7 +16,9 @@ services:
       - ims-network
 
   backend:
-    image: abhikodati/ims-backend:latest
+    build:
+      context: ./Inventory-Management-System
+      dockerfile: Dockerfile
     container_name: ims-backend
     ports:
       - "8080:8080"
